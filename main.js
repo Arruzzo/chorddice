@@ -1,7 +1,7 @@
-const p2 = document.querySelector('#p2');
+const p3 = document.querySelector('#p3');
 const button = document.querySelector('.button');
 const chord = ["C", "C#", "D", "Eb", "E", "F", "F#", "G", "G#", "A", "Bb", "B"];
-const quality = ["", "m"];
+const quality = ["", "m", "", "m", "", "m", "7", "m7"]; /*Triple the chances to get only major or minor chords*/
 
 button.addEventListener('click', show);
 
@@ -9,5 +9,5 @@ function show() {
     const randomChord = Math.floor(Math.random() * chord.length);
     const randomQuality = Math.floor(Math.random() * quality.length);
 
-p2.innerHTML = chord[randomChord] + quality[randomQuality];
+p3.innerHTML = chord[randomChord] + quality[randomQuality];
 }
